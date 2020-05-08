@@ -41,6 +41,7 @@ console.log(selYear)
         },
         showlegend: false,
         xaxis: {title: "Percentage of Arrests",
+        margin: {b:-10, t:-10},
           tickangle: -45
         },
         yaxis: {
