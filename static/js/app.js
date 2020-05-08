@@ -1,7 +1,3 @@
-// Use d3.csv to import data
-// d3.csv("././Resources/arrestpt.csv", function(data){
-//    console.log(data)
-
 // Create dropdown menu
 var yearDD = d3.select("#selDataset");
 
@@ -11,7 +7,7 @@ var yearDD = d3.select("#selDataset");
 function updateBar(selYear) {
 console.log(selYear)
     // Use d3.csv to import data
-    d3.csv("././Resources/arrestpt.csv").then(function(data){
+    d3.csv("https://cors-anywhere.herokuapp.com/https://tedi529.github.io/Chicago-Crime/Resources/arrestpt.csv").then(function(data){
     // console.log(data)
 
         x = [];
@@ -51,7 +47,8 @@ console.log(selYear)
           zeroline: false,
           gridwidth: 0,
                   },
-        bargap :0.05
+        bargap :0.05,
+        margin: {l:250, r:100}
       };
 
     Plotly.newPlot("bar", barData, barLayout, responsive = true);
@@ -65,7 +62,7 @@ function updatepie(selYear) {
 // Source reference:  https://plotly.com/javascript/pie-charts/
 
     // Use d3.csv to import data
-    d3.csv("./Resources/arrestct.csv").then(function(data){
+    d3.csv("https://cors-anywhere.herokuapp.com/https://tedi529.github.io/Chicago-Crime/Resources/arrestct.csv").then(function(data){
     console.log(data)
 
     var value = [];
@@ -111,7 +108,7 @@ function updatepie(selYear) {
 function updateBar2(selYear) {
     console.log(selYear)
         // Use d3.csv to import data
-        d3.csv("./Resources/toptenpt.csv").then(function(data){
+        d3.csv("https://cors-anywhere.herokuapp.com/https://tedi529.github.io/Chicago-Crime/Resources/toptenpt.csv").then(function(data){
         // console.log(data)
     
             x = [];
@@ -151,7 +148,8 @@ function updateBar2(selYear) {
               zeroline: false,
               gridwidth: 0,
                       },
-            bargap :0.05
+            bargap :0.05,
+            margin: {l:250, r:100}
           };
     
         Plotly.newPlot("bar2", bar2Data, bar2Layout, responsive = true);

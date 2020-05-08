@@ -54,9 +54,8 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-4">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-2">
                         <div class="well">                    
                             <h5>Year:</h5>
                             <select id="selDataset" ><option value="2016">2016</option>
@@ -64,29 +63,86 @@
                                 <option value="2018">2018</option><option value="2019">2019</option></select>
                         </div>
                     </div>
-                </div>
+                    <div class="col-md-5">
+                      <div class="well">
+                          <div id="pie"></div>
+                      </div>
+                  </div> 
+                  <div class="col-md-5">
+                    <p>
+                      Visualization overview
+                      <br>
+                      Pie Chart:
+                      <br>
+                      As we seen in the maps as well as the pie chart below, most crime in Chicago go unsolved.  
+                      There was little difference year to year. However, 2018 and 2019 there were increases in arrests.
+                      <br>
+                      Bar 1
+                      <br>
+                      Of those crimes that an arrest was made, most were non-violent crimes.  Crimes such as Gambling, 
+                      Prostitution, Public Indecency, and narcotics had nearly a 100% arrest rate.  This was consistent 
+                      year to year.
+                      <br>
+                      Bar 2
+                      <br>
+                      The top 10 overall crimes in Chicago for this time span were:
+                      <div class="row">
+                      <div class="col-md-6">
+                        <ol>
+                          <li>
+                            Theft
+                          </li>      
+                          <li>
+                            Battery
+                          </li> 
+                          <li>
+                            Criminal
+                          </li>
+                          <li>
+                            Assault
+                          </li>
+                          <li>
+                            Deceptive Practices
+                          </li>       
+                        </ol>
+                      </div>
+                      <div class="col-md-6">
+                        <ol start="6">
+                          <li>
+                            Other Offense
+                          </li>      
+                          <li>
+                            Narcotics
+                          </li>        
+                          <li>
+                            Burglary
+                          </li>   
+                          <li>
+                            Motor Vehicle Theft
+                          </li>   
+                          <li>
+                            Robbery
+                          </li>                             
+                        </ol>
+                      </div>
+                      </div>
+                      </p>
+                  </div>
+                  </div> 
             </div>
-         <div class="row">
-            <div class="col-md-8">
-                <div class="well">
-                    <div id="pie"></div>
-                </div>
-            </div>            
-            <div class="col-md-8">
+          </div>
+         <div class="row">          
+            <div class="col-md-6">
                 <div class="well">
                     <div id="bar"></div>
                 </div>
-            </div>
-​
-        </div> 
-        
+            </div> 
+            <div class="col-md-6">
+              <div class="well">
+                  <div id="bar2"></div>
+              </div>
+          </div>                  
         </div>            
-            <div class="col-md-8">
-                <div class="well">
-                    <div id="bar2"></div>
-                </div>
-            </div>
-​
         </div>
     </div>
     <footer class="footer navbar-fixed-bottom nav-text">
