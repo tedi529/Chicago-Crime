@@ -21,7 +21,7 @@ body {
 
 p{
   font-family:"Cormorant Garamond";
-  font-weight: bold;
+  text-indent: 30px;
 }
 
 h1{
@@ -62,10 +62,6 @@ h4{
   color: white;  
 }
 
-p { 
-  text-indent: 30px;
-}
-
 #bg {
   position: fixed; 
   top: 0; 
@@ -93,6 +89,7 @@ p {
 
 p.a {
   margin-left: 75px;
+  text-indent:0px;
 }
 
 @media(min-width: 480px) {
