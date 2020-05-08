@@ -65,47 +65,49 @@
         <div class="h-divider"></div>
           <div class="single-post-content-wrapper p-5">
             <p>
-                  Machine Learning:We examined the ability of three machine learning algorithms to predict whether 
-                  recorded crimes in the City of Chicago resulted in an arrest. This is a classification problem 
-                  with a binary answer – arrest or no arrest. We used the official City of Chicago data portal 
-                  at https://data.cityofchicago.org/ to download crime records for the years 2016-2019. We 
-                  decided to train our model on information from the years 2016-2018. This provided us with a 
-                  robust dataset of 787901 observations. The dataset had 22 features, which were a mix of time, 
-                  location, and other categorical data. We tested the ability of our models to predict arrests 
-                  for the 256908 crimes recorded in 2019. The three models used were a Random Forest (RF) 
-                  classifier, a Stochastic Gradient Descent (SGD) classification model, and a linear Support 
-                  Vector Machine (SVM) model. Feature engineering was done differently in each of the three
-                  models, and the features included to predict the target were different. The RF classifier
-                   used the following 12 features: month, hour, day of week, district, block, ward, beat, 
-                   community area, location description, FBI code, primary type, anddomestic. The SGD model
-                    used the following 11 features one hot encoded resulting in a total of 100 columns: 
-                    month, hour, day of week, district, ward, community area, description, location 
-                    description, fbi code, primary type, and domestic. The SVM model used the following 13 
-                    features: month, hour, day of week, district, ward, beat, community area, description, 
-                    location description, iucr, FBI code, primary type, and domestic.Of the models tested 
-                    herein, the RF classifier performed best with a weighted average f1-score of 0.85, SGD 
-                    second best with 0.83 and the SVM model last with 0.69. All three models were much better 
-                    at labeling crimes that did not result in arrest as non-arrest than those that did result 
-                    in arrest as arrest. Specifically, all three models classified less than 50% of true arrests 
-                    as arrests but classified virtually 100% of true non-arrests as non-arrests. Conversely, all 
-                    three models had weighted average precision greater than 75%, meaning that for all instances 
-                    classified one way or the other, based on the numerical occurrence of each class, they were 
-                    correct 75% of the time. 
-              </p>
-              <br>
-              <p>
-                  We believe this exercise was a useful examination of the conditions that could help predict the 
-                  quantity and likelihood of solving crimes given a particular set of characteristics. As reported 
-                  by the Pew Research Center, 
-                  (https://www.pewresearch.org/fact-tank/2017/03/01/most-violent-and-property-crimes-in-the-u-s-go-unsolved/) most 
-                  violent and property crimes in the US go unsolved. Efforts to establish criminal patterns could 
-                  bolster the efforts of law enforcement in solving crimes and preventing future ones. While our models 
-                  did notprovide clear evidence for particular conclusions, the importance of feature engineering cannot 
-                  be underestimated, and the different strengths of each model underscore the need for more work to be 
-                  done in determining the best combination of features and machine learning algorithms for the task of 
-                  establishing criminal patterns and arrests.  
-              </p>
-            </div>
+              We examined the ability of three machine learning algorithms to predict whether 
+              recorded crimes in the City of Chicago resulted in an arrest. This is a classification problem 
+              with a binary answer – arrest or no arrest. We used the official City of Chicago data portal 
+              at https://data.cityofchicago.org/ to download crime records for the years 2016-2019. We 
+              decided to train our model on information from the years 2016-2018. This provided us with a 
+              robust dataset of 787 901 observations. The dataset had 22 features, which were a mix of time, 
+              location, and other categorical data. We tested the ability of our models to predict arrests 
+              for the 256 908 crimes recorded in 2019. The three models used were a Random Forest (RF) 
+              classifier, a Stochastic Gradient Descent (SGD) classification model, and a linear Support 
+              Vector Machine (SVM) model. Feature engineering was done differently in each of the three
+              models, and the features included to predict the target were different. The RF classifier
+              used the following 12 features: month, hour, day of week, district, block, ward, beat, 
+              community area, location description, FBI code, primary type, anddomestic. The SGD model
+              used the following 11 features one hot encoded resulting in a total of 100 columns: 
+              month, hour, day of week, district, ward, community area, description, location 
+              description, fbi code, primary type, and domestic. The SVM model used the following 13 
+              features: month, hour, day of week, district, ward, beat, community area, description, 
+              location description, iucr, FBI code, primary type, and domestic.
+            </p>
+            <br>
+            <p>
+              The RF classifier performed best with a weighted average f1-score of 0.85, SGD 
+              second best with 0.83 and the SVM model last with 0.69. All three models were much better 
+              at labeling crimes that did not result in arrest as non-arrest than those that did result 
+              in arrest as arrest. Specifically, all three models classified less than 50% of true arrests 
+              as arrests but classified virtually 100% of true non-arrests as non-arrests. Conversely, all 
+              three models had weighted average precision greater than 75%, meaning that for all instances 
+              classified one way or the other, based on the weighted occurrence of each class, they were 
+              correct more than 75% of the time. 
+            </p>
+            <br>
+            <p>
+              We believe this exercise was a useful examination of the conditions that could help predict the 
+              quantity and likelihood of solving crimes given a particular set of characteristics. As reported 
+              by the Pew Research Center, 
+              (https://www.pewresearch.org/fact-tank/2017/03/01/most-violent-and-property-crimes-in-the-u-s-go-unsolved/) most 
+              violent and property crimes in the US go unsolved. Efforts to establish criminal patterns could 
+              bolster the efforts of law enforcement in solving crimes and preventing future ones. While our models 
+              did notprovide clear evidence for particular conclusions, the importance of feature engineering cannot 
+              be underestimated, and the different strengths of each model underscore the need for more work to be 
+              done in determining the best combination of features and machine learning algorithms for the task of 
+              establishing criminal patterns and arrests.  
+            </p>
           </div>
         </div>    
       </div>             
