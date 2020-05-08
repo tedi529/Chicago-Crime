@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta name="viewport" charset="UTF-8">
   <link rel="stylesheet" href="./static/css/bootstrap.min.css">    
   <script src="./static/js/jquery-3.4.1.slim.min.js" ></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
@@ -50,21 +50,20 @@
   <div class="container-fluid gutter ">
     <div class="row ">
       <div class="col-sm-12 ">
-        <h1 class="data">Classifier Model Comparison</h1>
+        <h3 class="data">Classifier Model Comparison</h3>
       </div>
     </div>
     <div class="row">
       <div class="col-sm-12">          
         <div class="h-divider"></div>
           <img class="img-fluid mx-auto d-block" src="./Images/model_comparison.png" alt="Responsive image">
+          <div class="h-divider"></div>
         </div>
       </div>    
     </div>
     <div class="row">
       <div class="col-sm-12">          
-        <div class="h-divider"></div>
-          <div class="single-post-content-wrapper p-5">
-            <p>
+            <p >
               We examined the ability of three machine learning algorithms to predict whether 
               recorded crimes in the City of Chicago resulted in an arrest. This is a classification problem 
               with a binary answer – arrest or no arrest. We used the official City of Chicago data portal 
@@ -84,7 +83,6 @@
               features: month, hour, day of week, district, ward, beat, community area, description, 
               location description, iucr, FBI code, primary type, and domestic.
             </p>
-            <br>
             <p>
               The RF classifier performed best with a weighted average f1-score of 0.85, SGD 
               second best with 0.83 and the SVM model last with 0.69. All three models were much better 
@@ -95,7 +93,6 @@
               classified one way or the other, based on the weighted occurrence of each class, they were 
               correct more than 75% of the time. 
             </p>
-            <br>
             <p>
               We believe this exercise was a useful examination of the conditions that could help predict the 
               quantity and likelihood of solving crimes given a particular set of characteristics. As reported 
@@ -108,15 +105,16 @@
               done in determining the best combination of features and machine learning algorithms for the task of 
               establishing criminal patterns and arrests.  
             </p>
-          </div>
         </div>    
       </div>             
   </div>
-</div>
-  <footer class="footer navbar-fixed-bottom nav-text">
+
+  <footer class="footer">
     <div class="container">
         <span class="text">Chicago Crime Analysis - UCF Data Analytics Bootcamp</span>
     </div>
-  </footer>    
+  </footer>  
+</div>
+   
 </body>
 </html>
