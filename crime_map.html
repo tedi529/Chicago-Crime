@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./static/css/bootstrap.min.css">    
+  <script src="./static/js/jquery-3.4.1.slim.min.js" ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://getbootstrap.com/docs/4.1/getting-started/javascript/#util"></script>
+  <script src="./static/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="./static/css/style.css"> 
+</head>
+<body onload="initViz();">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="main">
+        <a href="index.html" class="navbar-brand js-scroll-trigger">
+          <img class="img-fluid" src=".\Images\logo2.png" width="100px" height="100px" alt="logo">
+        </a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="#here" class="nav-link">Visualizations</a>
+            </li>              
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" 
+              href="crime_map.html">Crime Map</a>
+            </li>            
+            <li class="nav-item">
+              <a href="comparison_page.html" class="nav-link">ML Comparison</a>
+            </li>
+            <li class="nav-item">
+              <a href="data_page.html" class="nav-link">Data</a>
+            </li>            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="https://github.com/tedi529/Chicago-Crime">GitHub Repository</a>
+                <a class="dropdown-item" href="APIs.html">APIs</a>
+              </div>
+            </li>
+          </ul>
+      </div>
+    </nav> 
+  </div>
+  <div class="row">
+    <div class="col-sm-12">          
+        <div class="single-post-content-wrapper p-5">
+          <p>
+            As seen in the yearly incidence maps of Chicago crimes from 2016-2019 below, 
+            the pattern of arrests does not vary greatly. As of May 2, 2020, there were 266398 
+            recorded crimes in Chicago in 2016 with 52 792 arrests, 261 398 crimes with 51649
+            arrests in 2017, 260 105 crimes with 52 252 arrests in 2018, and 256 908 crimes with 54956 
+            arrests in 2019. Arrests occurred for roughly 20% of recorded crimes in 2016, 2017 and 2018 
+            and 21% in 2019.
+            </p>
+          </div>
+        </div>
+      </div>   
+      <div class="row">
+        <div class="col-sm-12">  
+    <!-- https://www.zuar.com/blog/embedded-analytics-how-to-embed-tableau-dashboards-into-a-web-page/ -->
+    <div class='tableauPlaceholder' id='viz1588816731211' style='width: 800px; height: 600px;'>
+      <noscript><a href='#'>
+        <img alt=' ' src='https:/public.tableau.com/static/images/Ch/ChicagoCrime_15886999739040/2016-2017Dashboard/1_rss.png' style='border: none' /></a>
+      </noscript>
+      <object class='tableauViz' width='800' height='600'  style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+        <param name='embed_code_version' value='3' /> 
+        <param name='site_root' value='' />
+        <param name='name' value='ChicagoCrime_15886999739040/2016-2017Dashboard' />
+        <param name='tabs' value='no' />
+        <param name='toolbar' value='yes' />
+        <param name='static_image' value='https://public.tableau.com/static/images/Ch/ChicagoCrime_15886999739040/2016-2017Dashboard/1.png' /> 
+        <param name='animate_transition' value='yes' />
+        <param name='display_static_image' value='yes' />
+        <param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' />
+      </object>
+    </div>                
+    <script type='text/javascript'> 
+    var divElement = document.getElementById('viz1588816731211');                    
+    var vizElement = divElement.getElementsByTagName('object')[0];                    
+    if ( divElement.offsetWidth > 800 ) { 
+      vizElement.style.width='100%';
+      vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
+      else if ( divElement.offsetWidth > 500 ) { 
+        vizElement.style.width='100%';
+        vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+        } 
+        else { vizElement.style.width='100%';
+        vizElement.style.height='727px';
+      }                    
+         var scriptElement = document.createElement('script');                    
+         scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+         vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+      </script>
+</div>
+      </div>
+<div class="row">
+  <div class="col-sm-12">  
+<div class='tableauPlaceholder' id='viz1588816834410' style='width: 800px; height: 600px;'>
+  <noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ch&#47;ChicagoCrime_15886999739040&#47;2018-2019Dashboard&#47;1_rss.png' style='border: none' /></a>
+  </noscript><object class='tableauViz'  width='800' height='600' style='display:none;'>
+    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+    <param name='embed_code_version' value='3' /> 
+    <param name='site_root' value='' />
+    <param name='name' value='ChicagoCrime_15886999739040&#47;2018-2019Dashboard' />
+    <param name='tabs' value='no' />
+    <param name='toolbar' value='yes' />
+    <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ch&#47;ChicagoCrime_15886999739040&#47;2018-2019Dashboard&#47;1.png' /> 
+    <param name='animate_transition' value='yes' />
+    <param name='display_static_image' value='yes' />
+    <param name='display_spinner' value='yes' />
+    <param name='display_overlay' value='yes' />
+    <param name='display_count' value='yes' /></object>
+  </div>                
+  <script type='text/javascript'>                    
+  var divElement = document.getElementById('viz1588816834410');                    
+  var vizElement = divElement.getElementsByTagName('object')[0];                    
+  if ( divElement.offsetWidth > 800 ) { 
+    vizElement.style.width='100%';
+    vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
+    else if ( divElement.offsetWidth > 500 ) { 
+      vizElement.style.width='100%';
+      vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
+      else { vizElement.style.width='100%';vizElement.style.height='727px';}                     
+      var scriptElement = document.createElement('script');                    
+      scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+      vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+      </script>
+      </div>
+    </div>
+  </div> 
+
+  <footer class="footer navbar-fixed-bottom nav-text">
+      <div class="container">
+          <span class="text">Chicago Crime Analysis - UCF Data Analytics Bootcamp</span>
+      </div>
+    </footer>   
+                 
+</body>
+</html>

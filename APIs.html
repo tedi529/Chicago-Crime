@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./static/css/bootstrap.min.css">    
+  <script src="./static/js/jquery-3.4.1.slim.min.js" ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://getbootstrap.com/docs/4.1/getting-started/javascript/#util"></script>
+  <script src="./static/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="./static/css/style.css"> 
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="main">
+        <a href="index.html" class="navbar-brand js-scroll-trigger">
+          <img class="img-fluid" src=".\Images\logo2.png" width="100px" height="100px" alt="logo">
+        </a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="#here" class="nav-link">Visualizations</a>
+            </li>              
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" 
+              href="crime_map.html">Crime Map</a>
+            </li>            
+            <li class="nav-item">
+              <a href="comparison_page.html" class="nav-link">ML Comparison</a>
+            </li>
+            <li class="nav-item">
+              <a href="data_page.html" class="nav-link">Data</a>
+            </li>            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="https://github.com/tedi529/Chicago-Crime">GitHub Repository</a>
+                <a class="dropdown-item" href="APIs.html">APIs</a>
+              </div>
+            </li>
+          </ul>
+      </div>
+    </nav> 
+  </div>
+  <div class="row ">
+    <div class="col-sm-12 ">
+      <h1 class="data">APIs and Documentation</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">          
+      <div class="h-divider"></div>
+    </div>
+  </div>   
+  <div class="list-group">
+    <a href="https://help.tableau.com/current/api/js_api/en-us/JavaScriptAPI/js_api_sample_basic_embed.htm" 
+       class="list-group-item list-group-item-action flex-column align-items-start">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">Tableau API Documentation</h5>
+        <small>Embedded Crime Maps</small>
+      </div>
+      <p class="mb-1">Use the Tableau JavaScript API to integrate Tableau visualizations into your own web applications.</p>
+      <small>Embed a visualization in a div element.</small>
+    </a>
+    <a href="https://data.cityofchicago.org/browse?category=Public%20Safety" 
+    class="list-group-item list-group-item-action flex-column align-items-start">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">Chicago Crime Data API</h5>
+        <small class="text-muted">Data Source for Crime Analysis</small>
+      </div>
+      <p class="mb-1">This dataset reflects reported incidents of crime that occurred in the City of Chicago. Data is extracted from 
+        the Chicago Police Department's CLEAR (Citizen Law Enforcement Analysis and Reporting) system. 
+        In order to protect the privacy of crime victims, addresses are shown at the block level only 
+        and specific locations are not identified.</p>
+      <small class="text-muted">Murder crimes excluded</small>
+    </a>
+    <div class="row ">
+      <div class="col-sm-12 ">
+        <h1 class="data">Machine Learning and Modeling</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">          
+        <div class="h-divider"></div>
+      </div>
+    </div>  
+    <a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html#sklearn.ensemble.RandomForestClassifier" 
+    class="list-group-item list-group-item-action flex-column align-items-start">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">sklearn.ensemble.RandomForestClassifier</h5>
+        <small class="text-muted">Classifier</small>
+      </div>
+      <p class="mb-1">A random forest is a meta estimator that fits a number of decision tree classifiers on various sub-samples of the dataset and 
+        uses averaging to improve the predictive accuracy and control over-fitting. </p>
+      <small class="text-muted">RandomForestClassifier</small>
+    </a>
+    <a href="https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html" 
+    class="list-group-item list-group-item-action flex-column align-items-start">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">sklearn.svm.LinearSVC</h5>
+        <small class="text-muted">Linear Classifier alternative to SVC</small>
+      </div>
+      <p class="mb-1">Similar to SVC with parameter kernel=’linear’, but implemented in terms of liblinear rather than libsvm, so it has 
+        more flexibility in the choice of penalties and loss functions and should scale better to large numbers of samples. </p>
+      <small class="text-muted">Linear Support Vector Classification</small>
+    </a> 
+    <a href="https://scikit-learn.org/stable/modules/sgd.html" 
+    class="list-group-item list-group-item-action flex-column align-items-start">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">sklearn.linear_model.SGDClassifier</h5>
+        <small class="text-muted">Stochastic Gradient Descent</small>
+      </div>
+      <p class="mb-1">A simple yet very efficient approach to discriminative learning of linear classifiers under convex 
+        loss functions such as (linear) Support Vector Machines and Logistic Regression. </p>
+      <small class="text-muted">Classifier</small>
+    </a>
+    <div class="row ">
+      <div class="col-sm-12 ">
+        <h1 class="data">Visualizations</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">          
+        <div class="h-divider"></div>
+      </div>
+    </div> 
+    <a href="https://plotly.com/python/" 
+    class="list-group-item list-group-item-action flex-column align-items-start">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">Plotly</h5>
+        <small class="text-muted">Plotly Python Open Source Graphing Library </small>
+      </div>
+      <p class="mb-1">Plotly's Python graphing library makes interactive, publication-quality graphs.  </p>
+      <small class="text-muted">Visualizations</small>
+    </a>                
+  </div>
+    <footer class="footer navbar-fixed-bottom nav-text">
+      <div class="container">
+          <span class="text">Chicago Crime Analysis - UCF Data Analytics Bootcamp</span>
+      </div>
+    </footer>        
+</body>
+</html>
