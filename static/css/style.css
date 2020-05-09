@@ -2,8 +2,8 @@
   border-radius: 0px;
   margin-bottom: 0px !important;
   width: 100%;
+  padding-top: 0.15rem; padding-bottom: 0.15rem;
 }
-
 
 header {
   background: rgb(191, 209, 188);
