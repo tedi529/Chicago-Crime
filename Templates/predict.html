@@ -27,6 +27,9 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" 
               href="crime_map.html">Crime Map</a>
+            </li> 
+            <li class="nav-item">
+              <a href="predict.html" class="nav-link">Prediction</a>
             </li>            
             <li class="nav-item">
               <a href="comparison_page.html" class="nav-link">ML Comparison</a>
@@ -54,21 +57,77 @@
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="month" placeholder="Month" required="required" />
-        <input type="text" name="hour" placeholder="Hour" required="required" />
-        <input type="text" name="day of the week" placeholder="Day of the week" required="required" />
-        <input type="text" name="primary_type" placeholder="Type of crime" required="required" />
-        <input type="text" name="location_description" placeholder="Location" required="required" />
+      <input type="text" name="month" placeholder="Month" required="required" list="months" />
+      <datalist id="months">
+        <option value=1>January</option>
+        <option value=2>February</option>
+        <option value=3>March</option>
+        <option value=4>April</option>
+        <option value=5>May</option>
+        <option value=6>June</option>
+        <option value=7>July</option>
+        <option value=8>August</option>
+        <option value=9>September</option>
+        <option value=10>October</option>
+        <option value=11>November</option>
+        <option value=12>December</option>
+      </datalist>
+      <input type="text" name="hour" placeholder="Hour" required="required" list="hours" />
+      <datalist id="hours">
+        <option value=1>1</option>
+        <option value=2>2</option>
+        <option value=3>3</option>
+        <option value=4>4</option>
+        <option value=5>5</option>
+        <option value=6>6</option>
+        <option value=7>7</option>
+        <option value=8>8</option>
+        <option value=9>9</option>
+        <option value=10>10</option>
+        <option value=11>11</option>
+        <option value=12>12</option>
+        <option value=13>13</option>
+        <option value=14>14</option>
+        <option value=15>15</option>
+        <option value=16>16</option>
+        <option value=17>17</option>
+        <option value=18>18</option>
+        <option value=19>19</option>
+        <option value=20>20</option>
+        <option value=21>21</option>
+        <option value=22>22</option>
+        <option value=23>23</option>
+        <option value=24>24</option>
+      </datalist>
+      <input type="text" name="day of the week" placeholder="Day of the week" required="required" list = "days" />
+      <datalist id="days">
+        <option value=0>Monday</option>
+        <option value=1>Tuesday</option>
+        <option value=2>Wednesday</option>
+        <option value=3>Thursday</option>
+        <option value=4>Friday</option>
+        <option value=5>Saturday</option>
+        <option value=6>Sunday</option>
+      </datalist>
+      <input type="text" name="primary_type" placeholder="Type of crime" required="required" list="types"/>
+      <datalist id="types"></datalist>
+      <input type="text" name="location_description" placeholder="Location" required="required" list="locations" />
+      <datalist id="locations"></datalist>
 
 
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict if there will be an arrest</button>
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict if there will be an arrest</button>
     </form>
 
    <br>
    <br>
    {{ prediction_text }}
 
-</div>
+ </div>
+
+ <script src="static/js/predict.js"></script>
+
+
+
 
    <footer class="footer navbar-fixed-bottom nav-text">
     <div class="container">
