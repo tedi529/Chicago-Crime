@@ -27,7 +27,11 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" 
               href="crime_map.html">Crime Map</a>
-            </li>            
+            </li>    
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" 
+              href="predict.html">Prediction</a>
+            </li>          
             <li class="nav-item">
               <a href="comparison_page.html" class="nav-link">ML Comparison</a>
             </li>
@@ -49,36 +53,70 @@
     </nav> 
   </div>
 
-<body style="background: #CCCCFF;">
  <div class="login">
 	<h1>Arrest Forecasting</h1>
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="month" placeholder="Month" required="required" />
-        <input type="text" name="hour" placeholder="Hour" required="required" />
-        <input type="text" name="day of the week" placeholder="Day of the week" required="required" />
-        <input type="text" name="primary_type" placeholder="Type of crime" required="required" />
-        <input type="text" name="location_description" placeholder="Location" required="required" />
-
+        <input type="text" name="month" placeholder="Month" required="required" list="months" />
+        <datalist id="months">
+          <option value=1>January</option>
+          <option value=2>February</option>
+          <option value=3>March</option>
+          <option value=4>April</option>
+          <option value=5>May</option>
+          <option value=6>June</option>
+          <option value=7>July</option>
+          <option value=8>August</option>
+          <option value=9>September</option>
+          <option value=10>October</option>
+          <option value=11>November</option>
+          <option value=12>December</option>
+        </datalist>
+        <input type="text" name="hour" placeholder="Hour" required="required" list="hours" />
+        <datalist id="hours">
+          {%for i in range(1, 25) %}
+            <option value={{i}}>{{i}}</option>
+          {%endfor %}
+        </datalist>
+        <input type="text" name="day_of_week" placeholder="Day of the week" required="required" list="days" />
+        <datalist id="days">
+          <option value=0>Monday</option>
+          <option value=1>Tuesday</option>
+          <option value=2>Wednesday</option>
+          <option value=3>Thursday</option>
+          <option value=4>Friday</option>
+          <option value=5>Saturday</option>
+          <option value=6>Sunday</option>
+        </datalist>
+        <input type="select" name="primary_type" placeholder="Type of crime" required="required" list="types"/>
+        <datalist id="types">
+          {%for key in typemap%}
+            <option value="{{typemap[key]}}">{{key}}</option>
+          {%endfor %}
+        </datalist>
+        <input type="text" name="location_description" placeholder="Location" required="required" list="locations"/>
+        <datalist id="locations">
+          {%for key in locmap%}
+            <option value="{{locmap[key]}}">{{key}}</option>
+          {%endfor %}
+        </datalist>
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict if there will be an arrest</button>
     </form>
-
    <br>
-   <br>
-   {{ prediction_text }}
+   <h1>{{ output }}</h1>
 
-</div>
+  </div>
 
-   <footer class="footer navbar-fixed-bottom nav-text">
+  <script src="../static/js/predict.js"></script>
+
+  <footer class="footer navbar-fixed-bottom nav-text">
     <div class="container">
         <span class="text">Chicago Crime Analysis - UCF Data Analytics Bootcamp</span>
     </div>
   </footer>    
 
  
-
-
 </body>
 </html>
