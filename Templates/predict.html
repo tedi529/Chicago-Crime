@@ -54,7 +54,7 @@
   </div>
 
  <div class="login">
-	<h1 class="data">Arrest Forecasting</h1>
+	<h3 class="data">Arrest Forecasting</h3>
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
@@ -105,11 +105,11 @@
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict if there will be an arrest</button>
     </form>
    <br>
-   <h1 class="data">{{ output }}</h1>
+   <h1 class="predict">{{ output }}</h1>
 
   </div>
 
-  <div class="container">
+
     <div class="model">
       <div class="row">
         <div class="col-lg-12">
@@ -131,9 +131,6 @@
    </div>
     </div>
   </div>
-  </div>
-
-  <script src="js/predict.js"></script>
 
   <footer class="footer navbar-fixed-bottom nav-text">
     <div class="container">
