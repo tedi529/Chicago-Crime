@@ -15,7 +15,7 @@ typemap = eval(open("Resources/type_dict.txt").read())
 def home():
     return render_template('index.html')
 
-@app.route('/predict.html', methods=['POST', 'GET'])
+@app.route('/predict.html', methods=['POST'])
 def predict():
     output = ''
     if flask.request.method == 'POST':
