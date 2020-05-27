@@ -4,7 +4,7 @@ import flask
 import pickle
 from flask import Flask, request, render_template
 
-app = Flask(__name__, static_url_path="/")
+app = Flask(__name__, static_url_path="/", template_folder='Templates')
 model = pickle.load(open("Machine_Learning/MLP_model.pkl", 'rb'))
 
 locmap = eval(open("Resources/loc_dict.txt").read())
