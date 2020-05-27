@@ -10,8 +10,8 @@ model = pickle.load(open("Machine_Learning/MLP_model.pkl", 'rb'))
 locmap = eval(open("Resources/loc_dict.txt").read())
 typemap = eval(open("Resources/type_dict.txt").read())
 
-@app.route('/index.html')
-@app.route('/')
+@app.route('/index.html', methods=['POST', 'GET'])
+@app.route('/', methods=['POST', 'GET'] )
 def home():
     return render_template('index.html')
 
