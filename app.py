@@ -2,8 +2,7 @@ import numpy as np
 import pandas as pd
 import flask
 import pickle
-import json
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, render_template
 
 app = Flask(__name__, static_url_path="/")
 model = pickle.load(open("Machine_Learning/MLP_model.pkl", 'rb'))
