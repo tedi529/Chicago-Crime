@@ -56,85 +56,103 @@
 
   <div class="container-fluid gutter">
     <div class="row">
-      <div class="col-sm-12 ">
+      <div class="col-sm-12">
         <h3 class="data">Arrest Forecasting</h3>
       </div>
-
+    </div>
         <!-- Main Input For Receiving Query to our ML -->
-        <form action="{{ url_for('predict')}}" method="post">
-            <input type="text" name="month" placeholder="Month" required="required" list="months" />
-            <datalist id="months">
-              <option value=1>January</option>
-              <option value=2>February</option>
-              <option value=3>March</option>
-              <option value=4>April</option>
-              <option value=5>May</option>
-              <option value=6>June</option>
-              <option value=7>July</option>
-              <option value=8>August</option>
-              <option value=9>September</option>
-              <option value=10>October</option>
-              <option value=11>November</option>
-              <option value=12>December</option>
-            </datalist>
-            <input type="text" name="hour" placeholder="Hour" required="required" list="hours" />
-            <datalist id="hours">
-              {%for i in range(1, 25) %}
-                <option value={{i}}>{{i}}</option>
-              {%endfor %}
-            </datalist>
-            <input type="text" name="day_of_week" placeholder="Day of the week" required="required" list="days" />
-            <datalist id="days">
-              <option value=0>Monday</option>
-              <option value=1>Tuesday</option>
-              <option value=2>Wednesday</option>
-              <option value=3>Thursday</option>
-              <option value=4>Friday</option>
-              <option value=5>Saturday</option>
-              <option value=6>Sunday</option>
-            </datalist>
-            <input type="select" name="primary_type" placeholder="Type of crime" required="required" list="types"/>
-            <datalist id="types">
-              {%for key in typemap%}
-                <option value="{{typemap[key]}}">{{key}}</option>
-              {%endfor %}
-            </datalist>
-            <input type="text" name="location_description" placeholder="Location" required="required" list="locations"/>
-            <datalist id="locations">
-              {%for key in locmap%}
-                <option value="{{locmap[key]}}">{{key}}</option>
-              {%endfor %}
-            </datalist>
+        <form class="form" action="{{ url_for('predict')}}" method="post">
+          <div class="form-row">
+            <div class="form-group col-sm-4">  
+              <div class="form-row">
+                <div class="form-group col-sm-12">
+                  <input class="form-control" type="text" name="month" placeholder="Month" required="required" list="months" />
+                  <datalist id="months">
+                    <option value=1>January</option>
+                    <option value=2>February</option>
+                    <option value=3>March</option>
+                    <option value=4>April</option>
+                    <option value=5>May</option>
+                    <option value=6>June</option>
+                    <option value=7>July</option>
+                    <option value=8>August</option>
+                    <option value=9>September</option>
+                    <option value=10>October</option>
+                    <option value=11>November</option>
+                    <option value=12>December</option>
+                  </datalist>
+                </div>
+              </div>
 
-            <button type="submit" class="btn">Predict Arrest or Not</button>
+              <div class="form-row">
+                <div class="form-group col-sm-12">     
+                  <input class="form-control" type="text" name="hour" placeholder="Hour" required="required" list="hours" />
+                  <datalist id="hours">
+                    {%for i in range(1, 25) %}
+                      <option value={{i}}>{{i}}</option>
+                    {%endfor %}
+                  </datalist>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-sm-12">            
+                  <input class="form-control" type="text" name="day_of_week" placeholder="Day of the week" required="required" list="days" />
+                  <datalist id="days">
+                    <option value=0>Monday</option>
+                    <option value=1>Tuesday</option>
+                    <option value=2>Wednesday</option>
+                    <option value=3>Thursday</option>
+                    <option value=4>Friday</option>
+                    <option value=5>Saturday</option>
+                    <option value=6>Sunday</option>
+                  </datalist>
+                </div>
+              </div>   
+              <div class="form-row">
+                <div class="form-group col-sm-12">                       
+                  <input class="form-control" type="select" name="primary_type" placeholder="Type of crime" required="required" list="types"/>
+                  <datalist id="types">
+                    {%for key in typemap%}
+                      <option value="{{typemap[key]}}">{{key}}</option>
+                    {%endfor %}
+                  </datalist>
+                </div>
+              </div>   
+              <div class="form-row">
+                <div class="form-group col-sm-12">                        
+                  <input class="form-control" type="text" name="location_description" placeholder="Location" required="required" list="locations"/>
+                  <datalist id="locations">
+                    {%for key in locmap%}
+                      <option value="{{locmap[key]}}">{{key}}</option>
+                    {%endfor %}
+                  </datalist>
+                </div>
+              </div>               
+              <div class="form-row">
+                <div class="form-group col-sm-12">  
+                  <button type="submit" class="btn btn-primary">Predict Arrest or Not</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <div class="h-divider"></div>
+                <h5 class ="data">
+                  <p class="m">MLP Classifier Model</p>
+                  <p class="m">Multi-layer Perception (MLP) is a supervised machine learning algorithm that learns by training on a dataset. 
+                  Given a set of features and a target, it learns to approximate a classification (outcome). It is different from logistic 
+                  regression in that it has non-linear layers, called hidden layers. Each layer transforms the value from the previous layer 
+                  with a weighted linear summation followed by a non-linear activation function. The output layer receives the values from the 
+                  last hidden layer and transforms into the output values.</p>
+                  <p class="m">Resources: <a href="https://scikit-learn.org/stable/modules/neural_networks_supervised.html">Supervised Neural Networks</a></p>
+                </h5>
+            </div>
+          </div>
         </form>
         <hr>
           <h1 class="predict">{{ output }}</h1>
         <hr>
     </div>
-  </div>
 
-    <div class="container-fluid gutter">
-      <div class="model">
-        <div class="row">
-          <div class="col-sm-12">
-                
-            <div class="h-divider"></div>
-
-              <h5 class ="data">
-                <p class="a">MLP Classifier Model</p>
-                <p class="a">Multi-layer Perception (MLP) is a supervised machine learning algorithm that learns by training on a dataset. 
-                Given a set of features and a target, it learns to approximate a classification (outcome). It is different from logistic 
-                regression in that it has non-linear layers, called hidden layers. Each layer transforms the value from the previous layer 
-                with a weighted linear summation followed by a non-linear activation function. The output layer receives the values from the 
-                last hidden layer and transforms into the output values.</p>
-                <p class="a">Resources: <a href="https://scikit-learn.org/stable/modules/neural_networks_supervised.html">Supervised Neural Networks</a></p>
-              </h5>
-
-          </div>
-        </div>
-      </div>
-    </div>
 
   <footer class="footer navbar-fixed-bottom nav-text">
     <div class="container">
