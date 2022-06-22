@@ -1,7 +1,7 @@
 Click==7.0
 Flask==1.1.1
 gunicorn==19.9.0
-numpy==1.17.4
+numpy==1.22.0
 pandas==0.25.3
 pickleshare==0.7.5
 requests==2.22.0
